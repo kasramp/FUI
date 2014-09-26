@@ -58,7 +58,7 @@ do
 	echo $c >> $filename6
    fi
 done
-rm -rvf $filename1 $filename2 $filename3 $filename4 $filename5
+rm -rvf $filename0 $filename1 $filename2 $filename3 $filename4 $filename5
 echo "Finished!, please check $filename6 for list of unique image names!"
 var3=`wc -l $filename6`
 echo "Overall there are $var3 unique images found"
