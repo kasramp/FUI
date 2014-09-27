@@ -43,6 +43,9 @@ sort -V $filename4 > $filename5
 
 #reading last line of file and use it as counter
 var=`tail -1 $filename5`
+#separating extension
+extension="${var##*.}"
+var="${var%.*}"
 echo "Counting image number in $1 folder"
 echo "There are $var images"
 counter=`expr $counter + 1`
@@ -51,7 +54,12 @@ filename6=$fixname$counter
 echo "Finding unique images"
 for (( c=1; c <= $var; c++ ))
 do
+   if [ "$var" == "$extension" ]
+   then
    var1=`grep -Fx $c $filename5`
+   else
+   var1=`grep -Fx $c.$extension $filename5`
+   fi
    if [ -z "$var1" ]
    then
 	echo "Image [$c] is unqiue"    
