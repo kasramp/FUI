@@ -21,7 +21,6 @@ In order to use the script just provide excuting permission and run it like belo
 
 ## Contact
 * kasra@madadipouya.com  
-* kasra_mp@live.com  
 
 ## License
 FUI is free software; you can redistribute it and/or modify
